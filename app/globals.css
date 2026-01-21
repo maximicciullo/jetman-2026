@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    @apply text-yellow-400;
+  }
+  
+  .text-gold-shadow {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  .text-white-shadow {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 8px rgba(255, 255, 255, 0.3);
+  }
+}
