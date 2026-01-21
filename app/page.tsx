@@ -1,29 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import LiveCounter from '@/components/LiveCounter'
 import PaymentSection from '@/components/PaymentSection'
 
 export default function Home() {
-  const [registrations, setRegistrations] = useState(0)
-
-  useEffect(() => {
-    // Cargar el contador inicial
-    fetch('/api/registrations')
-      .then(res => res.json())
-      .then(data => setRegistrations(data.count))
-      .catch(() => setRegistrations(0))
-
-    // Actualizar cada 2 segundos para efecto "en vivo"
-    const interval = setInterval(() => {
-      fetch('/api/registrations')
-        .then(res => res.json())
-        .then(data => setRegistrations(data.count))
-        .catch(() => {})
-    }, 2000)
-
-    return () => clearInterval(interval)
-  }, [])
 
 
   return (
@@ -198,11 +177,6 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-gold mb-1 text-center">Running</h3>
               <p className="text-lg md:text-xl font-bold text-center">5km</p>
             </div>
-          </div>
-
-          {/* Live Counter - Destacado y visible */}
-          <div className="mb-4 md:mb-5">
-            <LiveCounter count={registrations} />
           </div>
 
           {/* Payment Section - Inscripción por pago */}
