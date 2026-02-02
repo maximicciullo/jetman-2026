@@ -13,7 +13,7 @@ export default function Home() {
         <div 
           className="fixed inset-0 z-0"
           style={{
-            backgroundImage: 'url(/images/jetman-hero.jpg)',
+            backgroundImage: 'url(/images/jetman-hero.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -29,17 +29,28 @@ export default function Home() {
           {/* Header compacto */}
           <div className="text-center space-y-1 md:space-y-2 mb-3 md:mb-4">
             <h1 className="text-2xl md:text-3xl font-bold text-white-shadow uppercase tracking-wide" style={{ fontFamily: 'var(--font-racing)' }}>
-              Triatlón Apronte
+              Apronte de Triatlón
             </h1>
             <h2 className="text-4xl md:text-5xl font-black text-gold text-gold-shadow uppercase" style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.1em' }}>
               JETMAN
             </h2>
-            <div className="flex items-center justify-center gap-2 text-lg md:text-xl font-bold text-white-shadow">
-              <span>750</span>
-              <span className="text-gold">-</span>
-              <span>20</span>
-              <span className="text-gold">-</span>
-              <span>5</span>
+            <div className="space-y-1">
+              <div className="flex items-center justify-center gap-2 text-lg md:text-xl font-bold text-gold">
+                <span>1500</span>
+                <span>-</span>
+                <span>40</span>
+                <span>-</span>
+                <span>10</span>
+              </div>
+              <p className="text-xs text-gray-300">Natación | Ciclismo | Carrera</p>
+              <div className="flex items-center justify-center gap-2 text-base md:text-lg font-bold text-white-shadow">
+                <span>500</span>
+                <span className="text-gold">-</span>
+                <span>20</span>
+                <span className="text-gold">-</span>
+                <span>5</span>
+              </div>
+              <p className="text-xs text-gray-400">Natación | Ciclismo | Carrera</p>
             </div>
             <p className="text-sm md:text-base italic text-white-shadow flex items-center justify-center gap-1" style={{ fontFamily: 'var(--font-righteous), Arial Black, Impact, sans-serif' }}>
               "El más picante"
@@ -47,7 +58,7 @@ export default function Home() {
             </p>
             <div className="inline-block bg-black/60 border-2 border-yellow-400 px-4 py-2 rounded-lg backdrop-blur-sm">
               <p className="text-sm md:text-base font-bold text-white-shadow">
-                Sábado 31/01
+                Sábado 21/02
               </p>
             </div>
           </div>
@@ -58,7 +69,7 @@ export default function Home() {
               <div>
                 <div className="text-xl md:text-2xl mb-1">🏁</div>
                 <p className="text-xs text-gray-300 mb-0.5">Tipo</p>
-                <p className="text-sm md:text-base font-bold text-gold">Apronte Short</p>
+                <p className="text-sm md:text-base font-bold text-gold">Dos categorías</p>
               </div>
               <div>
                 <div className="text-xl md:text-2xl mb-1">📍</div>
@@ -160,22 +171,52 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Event Info Cards - Más compactas */}
-          <div className="grid grid-cols-3 gap-2 md:gap-3 mb-4 md:mb-5">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-yellow-400/30">
-              <div className="text-3xl md:text-4xl mb-2 text-center">🏊</div>
-              <h3 className="text-sm md:text-base font-bold text-gold mb-1 text-center">Natación</h3>
-              <p className="text-lg md:text-xl font-bold text-center">750m</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-yellow-400/30">
-              <div className="text-3xl md:text-4xl mb-2 text-center">🚴</div>
-              <h3 className="text-sm md:text-base font-bold text-gold mb-1 text-center">Ciclismo</h3>
-              <p className="text-lg md:text-xl font-bold text-center">20km</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-yellow-400/30">
-              <div className="text-3xl md:text-4xl mb-2 text-center">🏃</div>
-              <h3 className="text-sm md:text-base font-bold text-gold mb-1 text-center">Running</h3>
-              <p className="text-lg md:text-xl font-bold text-center">5km</p>
+          {/* Categorías - Distancias del evento */}
+          <div className="space-y-3 mb-4 md:mb-5">
+            <h3 className="text-base md:text-lg font-bold text-center text-gold text-gold-shadow">
+              Categorías
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4 border-2 border-yellow-400/40">
+                <p className="text-xs text-gray-400 mb-2 text-center">Olímpico</p>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <div className="text-2xl md:text-3xl mb-1">🏊</div>
+                    <p className="text-xs text-gray-300">Natación</p>
+                    <p className="text-base md:text-lg font-bold text-gold">1500m</p>
+                  </div>
+                  <div>
+                    <div className="text-2xl md:text-3xl mb-1">🚴</div>
+                    <p className="text-xs text-gray-300">Ciclismo</p>
+                    <p className="text-base md:text-lg font-bold text-gold">40km</p>
+                  </div>
+                  <div>
+                    <div className="text-2xl md:text-3xl mb-1">🏃</div>
+                    <p className="text-xs text-gray-300">Carrera</p>
+                    <p className="text-base md:text-lg font-bold text-gold">10km</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-yellow-400/30">
+                <p className="text-xs text-gray-400 mb-2 text-center">Short</p>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <div className="text-2xl md:text-3xl mb-1">🏊</div>
+                    <p className="text-xs text-gray-300">Natación</p>
+                    <p className="text-base md:text-lg font-bold text-gold">500m</p>
+                  </div>
+                  <div>
+                    <div className="text-2xl md:text-3xl mb-1">🚴</div>
+                    <p className="text-xs text-gray-300">Ciclismo</p>
+                    <p className="text-base md:text-lg font-bold text-gold">20km</p>
+                  </div>
+                  <div>
+                    <div className="text-2xl md:text-3xl mb-1">🏃</div>
+                    <p className="text-xs text-gray-300">Carrera</p>
+                    <p className="text-base md:text-lg font-bold text-gold">5km</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
